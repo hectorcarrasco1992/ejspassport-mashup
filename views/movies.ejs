@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>movie </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    
+        <link rel="stylesheet" href="./style.css" type="text/css">
+    </head>
+    <body>
+        
+        <h1>
+         <%- include('../partials/header') %>
+        </h1>
+       
+       
+<div class="app">
+
+    <% all.forEach(({title,backdrop_path,overview}) => {%>
+        
+            
+            <div class="data">
+
+                <img class="movies"src="<%= img + backdrop_path %> " alt="">
+                <div class="info">
+                    <h5 class="title"><%= title %>    </h5>
+                    <p class="overview"> <%= overview %> </p>
+                </div>
+                
+                
+                <%}) %>  
+            </div>
+            
+        
+        
+    </div>
+</div>
+
+<div class="footer">
+    <p><%- include('../partials/footer') %> </p>
+</div>
+
+
+
+
+
+    </body>
+</html>
+
