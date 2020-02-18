@@ -9,6 +9,7 @@ body {
     font-size: 1em;
     font-family: fantasy;
     justify-content: space-evenly;
+    background-color: whitesmoke;
 }
 
 #movieContain {
@@ -77,6 +78,9 @@ p {
     background-color: black;
     color: white;
     text-align: left;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
 }
 
 h4 {
