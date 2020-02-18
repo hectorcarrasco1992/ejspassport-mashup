@@ -37,6 +37,18 @@ app.get('/movies',(req,res)=>{
         .catch((err) => console.log(err))
 });
 
+app.get('/random', (req, res) => {
+    const url = 'https://randomuser.me/api/?results=20';
+
+    fetch(url)
+        .then((res) => res.json())
+        .then((users) => {
+            const allUsers = users.results.sort((a, b) => (a.name.last > b.name.last) ? 1 : ((b.name.last > a.name.last) ? -1 : 0))
+            res.render('random', { allUsers });
+        })
+        .catch((err) => console.log(err));
+});
+
 
 
 
